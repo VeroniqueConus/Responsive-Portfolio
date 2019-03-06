@@ -1,4 +1,3 @@
-/* You will write media queries at the bottom! */
 /* assigned margin a value of 0 to account for the browser's default styling*/
 
 .body {
@@ -13,12 +12,12 @@ h1, h2, h3, h4, h5, h6 {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-/* updated width to 100% */
 .header-container {
     width: 100%;
     position: relative;
     height: 70px;
     margin: auto;
+    box-sizing: border-box;
 }
 
 header {
@@ -49,6 +48,8 @@ nav a {
     padding: 20px;
     /* border-top: 2px solid #cccccc; */
     position: relative;
+    box-sizing: border-box;
+
 }
 
 .main-sec {
@@ -57,6 +58,7 @@ nav a {
     width: 100%;
     margin: 10px auto;  
     padding: 20px;
+    box-sizing: border-box;
 }
 
 .main-header {
@@ -84,23 +86,20 @@ p {
     margin-top: 0;
 }
 
-/* Added max-width and height auto to make responsive */
 .profile-img {
-    float: left;
-    margin: 0 20px 20px 0;
-    max-width: 80%;
-    min-width: 167px;
-    height: auto;
     position: relative;
-    width: 20%;
+    float: left;
+    width: 167px;
+    height: auto;
+    margin: 0 20px 20px 0;
 }
 
 .form {
     background-color: #ffffff;
     border-bottom-color: #cccccc;
-    width: 920px;
     margin: 10px auto;  
     padding: 20px;
+    box-sizing: border-box;
 }
 .button {
     background-color: #4aaaa5;
@@ -149,31 +148,55 @@ footer {
 }
 /* You will write media queries here! */
 
+/* 980 standard desktop 
+768 is standard tablet
+640 is smart phone in landscape*/
+
 /* This is the media query Container */
 
 @media only screen and (max-width: 768px){
-/* 768 needs work */
+    /* 768 needs work */
     .container {
-    width: 100%;
-    margin:0;
-    margin-bottom: 100px;
-    padding: 20px;
-    /* border-top: 2px solid #cccccc; */
-    position: relative;
+        max-width: 100%;
+     }
+
+    .header-container {
+        padding:0 20px;
     }
+
+    .profile-img {
+        width: 50%;
+    } 
 }
 
 @media only screen and (max-width: 640px){
 
-        .profile-img {
-        /* float: left; */
-        margin: 0;
-        padding-right: 40px;
-        /* max-width: 80%; */
-        min-width: 167px;
-        /* height: auto; */
-        position: relative;
+    .header-container {
+     height: auto;
+    padding: 0;
+    }
+
+    .me {
+        width: 100%;
+    text-align: center;
+    position: relative;
+    }
+
+    nav {
+        width: 100%;
+    text-align: center;
+    position: relative;
+    }
+
+    .profile-img {
         width: 100%;
     } 
+
+    .form {
+        
+    }
+}
+
+@media only screen and (min-width: 980px){
 }
 
