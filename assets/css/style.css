@@ -193,10 +193,17 @@ footer {
     } 
 
     .form {
-        
+        width: 100%;
+        text-align: center;
     }
-}
 
+
+.main-sec {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+/* This is the default screen, no changes needed */
 @media only screen and (min-width: 980px){
 }
 
