@@ -197,12 +197,15 @@ footer {
         text-align: center;
     }
 
-
 .main-sec {
     width: 100%;
     box-sizing: border-box;
     text-align: center;
 }
+
+    .textbox {
+        width: auto;
+    }
 /* This is the default screen, no changes needed */
 @media only screen and (min-width: 980px){
 }
